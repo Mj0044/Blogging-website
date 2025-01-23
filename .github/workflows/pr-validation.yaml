@@ -22,8 +22,7 @@ jobs:
         run: npx stylelint "**/*.css"
       - name: Build website using Parcel
         run: |
-          npx parcel build "./src/index.html" --dist-dir "./dist" -public-url "./"
-
+          npx parcel build "./src/index.html" --dist-dir "./dist" --public-url "./"
       - name: Display package.json contents
         run: |
           cat package.json
