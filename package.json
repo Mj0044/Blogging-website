@@ -1,20 +1,10 @@
 {
-  "name": "Blogging-website",
+  "name": "my-project",
   "version": "1.0.0",
+  "description": "A simple Node.js project",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Mj0044/Blogging-website.git"
-  },
-  "bugs": {
-    "url": "https://github.com/Mj0044/Blogging-website/issues"
-  },
-  "homepage": "https://github.com/Mj0044/Blogging-website#readme",
-  "description": ""
+  "author": "Your Name",
+  "license": "ISC"
 }
