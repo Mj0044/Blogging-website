@@ -1,6 +1,6 @@
 {
  "extends": "stylelint-config-standard",
-  "rules": {
+    "rules": {
       "declaration-block-no-duplicate-properties": true,
       "no-duplicate-selectors": true,
       "property-case": "lower",
