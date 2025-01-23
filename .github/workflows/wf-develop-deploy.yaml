@@ -1,0 +1,36 @@
+name: wf-develop-deployment-pr
+on:
+  push:
+    branches:
+      - develop
+jobs:
+  wf-develop-build-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: welcome message
+        run: echo "welcome to linting job"
+      - name: repo checkout
+        uses: actions/checkout@v4
+      - name: Build website using Parcel
+        run: |
+          npx parcel build "./src/index.html" --dist-dir "./dist" -public-url "./"
+      - name: upload artifacts
+        uses: actions/upload-page-artifacts@v3
+        with:
+          path: "./dist"
+          name: "develop-artifacts"
+  wf-develop-deploy-job:
+    needs: wf-develop-build-job
+    permissions:
+      pages: write
+      id-token: write
+    environment: "develop-env"
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Deploy build artifacts
+        uses: actions/deploy-page@v4
+        with:
+          artifacts_name: "develop-artifacts"
+          token: ${{ github.token }}
