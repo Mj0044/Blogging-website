@@ -10,7 +10,7 @@ jobs:
       - name: welcome message
         run: echo "welcome to linting job"
       - name: repo checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
       - name: Build website using Parcel
         run: |
           npx parcel build "./src/index.html" --dist-dir "./dist" -public-url "./"
