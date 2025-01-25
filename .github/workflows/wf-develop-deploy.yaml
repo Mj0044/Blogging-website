@@ -18,7 +18,7 @@ jobs:
         uses: actions/upload-page-artifacts@v3
         with:
           path: "./dist"
-          name: "develop-artifacts"
+          name: "develop-artifact"
   wf-develop-deploy-job:
     needs: wf-develop-build-job
     permissions:
