@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: welcome message
-        run: echo "welcome to linting job"
+        run: echo "welcome to linting job of assignment04"
       - name: repo checkout
         uses: actions/checkout@v4
       - name: Build website using Parcel
